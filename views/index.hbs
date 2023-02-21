@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    {{>navbar data=details}}
+  
+    {{> slider slides=slides}}
+
+   {{!-- banner1 --}}
+
+<section class="banner1_section py-5 background1">
+<div class="container text-center ">
+  <div class="row">
+    <div class="col-md-12">
+      <h2> Start learning new technologies</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores blanditiis maxime debitis earum illum temporibus aliquam, similique sit totam ipsum hic eligendi officia eveniet aliquid autem voluptatum eaque est ab.</p>
+      <button class="btn btn-outline-primary">start learning</button>
+    </div>
+  </div>
+</div>
+</section>
+
+   {{!-- services --}}
+
+   <section id="service_section" class="py-3 background3">
+   <div class="container">
+     <h1 class="text-center text-secondary">Our Services</h1>
+        <div class="row mt-5">
+            {{!-- first service column --}}
+        {{#each services}}
+          <div class="col-md-4 my-2">
+          <div class="card">
+            <div class="card-body">
+                <div class="container text-center py-3">
+                  <i class="{{this.icon}} service_icon"></i>
+                </div>
+              <h5 class="card-title">{{this.title}}</h3>
+              <p>{{this.description}}</p>
+            
+              <a href="{{this.link}}">{{this.linkText}}</a>
+              
+            </div>
+          </div>
+          </div>
+          {{/each}}
+        </div>
+   </div>
+   </section>
+  
+ {{!-- banner2 --}}
+
+<section class="banner2_section my-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-center">
+            {{!--Left side --}}
+          <h3>we work for people, not for money</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, culpa debitis corrupti maxime repellendus officia ipsam est magni, tempore iure laborum vero perferendis? Officia dicta quas corrupti inventore rem, doloribus repellat quisquam, earum veniam distinctio doloremque modi omnis nihil sed assumenda, ea optio recusandae consequatur maiores maxime repellendus dolore nesciunt voluptatem voluptatibus! Quibusdam, tenetur. Nemo placeat architecto, enim molestias quibusdam unde, laboriosam commodi numquam totam exercitationem officiis, esse saepe quae voluptas quos! Libero, distinctio dolores rem neque ea eveniet unde vero! Ducimus vel, a deleniti ipsa excepturi placeat. Deserunt, ipsum! Est ex amet excepturi esse porro repellat placeat reprehenderit corporis.</p>
+          <button class="btn btn-primary">start learning</button>
+      </div>
+      <div class="col-md-6 text-center py-3">
+          {{!--Right side --}}
+          <img src="/static/images/bg1.jpg" style="height: 300px" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{!-- banner3 --}}
+
+<section class="banner3_section my-3">
+  <div class="container">
+    <div class="row">  
+      <div class="col-md-6 text-center py-3">
+          {{!--Right side --}}
+          <img src="/static/images/bg1.jpg" class="img-fluid" style="height: 300px" alt="">
+      </div>
+      <div class="col-md-6 text-center">
+            {{!--Left side --}}
+          <h3>we work for people, not for money</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, culpa debitis corrupti maxime repellendus officia ipsam est magni, tempore iure laborum vero perferendis? Officia dicta quas corrupti inventore rem, doloribus repellat quisquam, earum veniam distinctio doloremque modi omnis nihil sed assumenda, ea optio recusandae consequatur maiores maxime repellendus dolore nesciunt voluptatem voluptatibus! Quibusdam, tenetur. Nemo placeat architecto, enim molestias quibusdam unde, laboriosam commodi numquam totam exercitationem officiis, esse saepe quae voluptas quos! Libero, distinctio dolores rem neque ea eveniet unde vero! Ducimus vel, a deleniti ipsa excepturi placeat. Deserunt, ipsum! Est ex amet excepturi esse porro repellat placeat reprehenderit corporis.</p>
+          <button class="btn btn-primary">start learning</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ {{!-- contact us section --}}
+
+ <section id="contact_us_section" class="py-5 background1">
+    <div class="container">
+      <h3 class="text-center text-secondary">Contact us</h3>
+      <div class="row">
+        <div class="col-md-12">
+
+        <form action="process-contact-form" method="POST">
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email address</label>
+            <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="contactNumberField" class="form-label">Your Contact Number</label>
+            <input name="phone"type="number" class="form-control" id="contactNumberField">
+          </div>
+        
+        <div class="form-floating my-2">
+          <textarea name="query" style="height: 250px;" class="form-control" placeholder="enter your query here" id="queryField" style="height: 100px"></textarea>
+          <label for="queryField">Your Query</label>
+        </div>
+
+        <div class="container text-center my-3">
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+
+         </form>
+        </div>
+      </div>
+    </div>
+ </section>
+  {{!-- about section --}}
+
+  <section class="about_section">
+    <div class="container text-center my-4">
+      <div class="row">
+      <div class="col-md-12">
+        <h3>About us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, dolores recusandae accusantium voluptatem, dolore pariatur eos nesciunt excepturi perspiciatis dignissimos architecto. Consequuntur dolorem voluptate perspiciatis excepturi veniam obcaecati, minima non vero quaerat nihil aspernatur dicta sunt vitae error tempora architecto delectus? Repellendus sunt optio enim dolor, cumque labore error perspiciatis iste tempore sed recusandae harum nam rem quos alias. Nostrum neque consequatur perspiciatis dolore praesentium. Iure voluptates, nobis qui asperiores quam blanditiis sint! Perspiciatis accusantium obcaecati mollitia temporibus at eum nihil. Quae dolorum autem voluptatum. Recusandae aperiam officiis totam perferendis voluptate accusamus, mollitia placeat culpa amet quas unde vero fuga vitae fugit repudiandae provident. Laboriosam nobis, inventore sequi quis molestias aliquam, iure animi labore quaerat, corrupti dignissimos sed voluptatum aut culpa ab tempore! Magnam aspernatur similique omnis natus sed modi distinctio. Deleniti enim totam aliquam maiores, incidunt inventore, necessitatibus repudiandae dicta accusamus dolores sapiente et odit molestiae nemo perspiciatis neque?</p>
+         <button class="btn btn-primary">start learning</button>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<sction class="">
+<footer class="container background3 text-center py-5">
+   <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        @2023 Copyright: <span>SahuDigitalSolutions</span>
+      </div>
+    </div>
+   </div>
+</footer>
+</sction>
+  </body>
+</html>
