@@ -5,6 +5,8 @@ const Details= require("../models/Detail")
 const Sildes= require("../models/slider")
 const Service = require("../models/Service")
 const Contact = require("../models/Contact");
+const About = require("../models/About");
+const Footer = require('../models/Footer');
 const { response } = require('express');
 
 const routes = express.Router()
@@ -12,12 +14,16 @@ routes.get("/",async (req,res)=>{
     const details = await Details.findOne({"_id":"63f37c3e48373d2b3ce6e428"})
     const slides= await Sildes.find()
     const services = await Service.find()
+    const about = await About.find()
+    const footer= await Footer.find()
     //console.log(details)
     // res.send("this is message from routes")
     res.render("index",{
         details:details,
         slides:slides,
-        services:services
+        services:services,
+        about:about,
+        footer:footer
     })
 })
 

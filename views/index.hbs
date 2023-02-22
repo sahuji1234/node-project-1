@@ -105,7 +105,7 @@
 
  <section id="contact_us_section" class="py-5 background1">
     <div class="container">
-      <h3 class="text-center text-secondary">Contact us</h3>
+      <h3 class="text-center text-white">Contact us</h3>
       <div class="row">
         <div class="col-md-12">
 
@@ -134,26 +134,34 @@
       </div>
     </div>
  </section>
+
   {{!-- about section --}}
 
-  <section class="about_section">
+  <section class="about_section background1">
     <div class="container text-center my-4">
+      {{#each about}}
       <div class="row">
       <div class="col-md-12">
-        <h3>About us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, dolores recusandae accusantium voluptatem, dolore pariatur eos nesciunt excepturi perspiciatis dignissimos architecto. Consequuntur dolorem voluptate perspiciatis excepturi veniam obcaecati, minima non vero quaerat nihil aspernatur dicta sunt vitae error tempora architecto delectus? Repellendus sunt optio enim dolor, cumque labore error perspiciatis iste tempore sed recusandae harum nam rem quos alias. Nostrum neque consequatur perspiciatis dolore praesentium. Iure voluptates, nobis qui asperiores quam blanditiis sint! Perspiciatis accusantium obcaecati mollitia temporibus at eum nihil. Quae dolorum autem voluptatum. Recusandae aperiam officiis totam perferendis voluptate accusamus, mollitia placeat culpa amet quas unde vero fuga vitae fugit repudiandae provident. Laboriosam nobis, inventore sequi quis molestias aliquam, iure animi labore quaerat, corrupti dignissimos sed voluptatum aut culpa ab tempore! Magnam aspernatur similique omnis natus sed modi distinctio. Deleniti enim totam aliquam maiores, incidunt inventore, necessitatibus repudiandae dicta accusamus dolores sapiente et odit molestiae nemo perspiciatis neque?</p>
-         <button class="btn btn-primary">start learning</button>
+        <h3>{{this.title}}</h3>
+        <p>{{this.description}}</p>
+         <button class="btn btn-primary my-3">{{this.buttonText}}</button>
       </div>
     </div>
+    {{/each}}
     </div>
   </section>
 
+{{!-- footer --}}
+
 <sction class="">
-<footer class="container background3 text-center py-5">
+<footer class="container background2 text-center py-5">
    <div class="container">
+   
     <div class="row">
       <div class="col-md-12">
-        @2023 Copyright: <span>SahuDigitalSolutions</span>
+        {{#each footer}}
+            <h5 class="text-white">{{this.footer}}</h5>
+       {{/each}}
       </div>
     </div>
    </div>
