@@ -23,9 +23,14 @@
 <div class="container text-center ">
   <div class="row">
     <div class="col-md-12">
-      <h2> Start learning new technologies</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores blanditiis maxime debitis earum illum temporibus aliquam, similique sit totam ipsum hic eligendi officia eveniet aliquid autem voluptatum eaque est ab.</p>
-      <button class="btn btn-outline-primary">start learning</button>
+
+      {{#each banners}}
+      {{#each this.banner1}}
+      <h2>{{this.title}}</h2>
+      <p>{{this.description}}</p>
+      <button class="btn btn-outline-primary">{{this.buttonText}}</button>
+      {{/each}}
+       {{/each}}
     </div>
   </div>
 </div>
@@ -62,18 +67,22 @@
 
 <section class="banner2_section my-3">
   <div class="container">
+      {{#each banners}}
+      {{#each banner2}}
     <div class="row">
       <div class="col-md-6 text-center">
             {{!--Left side --}}
-          <h3>we work for people, not for money</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, culpa debitis corrupti maxime repellendus officia ipsam est magni, tempore iure laborum vero perferendis? Officia dicta quas corrupti inventore rem, doloribus repellat quisquam, earum veniam distinctio doloremque modi omnis nihil sed assumenda, ea optio recusandae consequatur maiores maxime repellendus dolore nesciunt voluptatem voluptatibus! Quibusdam, tenetur. Nemo placeat architecto, enim molestias quibusdam unde, laboriosam commodi numquam totam exercitationem officiis, esse saepe quae voluptas quos! Libero, distinctio dolores rem neque ea eveniet unde vero! Ducimus vel, a deleniti ipsa excepturi placeat. Deserunt, ipsum! Est ex amet excepturi esse porro repellat placeat reprehenderit corporis.</p>
-          <button class="btn btn-primary">start learning</button>
+          <h3>{{this.title}}</h3>
+          <p>{{this.description}}</p>
+          <button class="btn btn-primary">{{this.buttonText}}</button>
       </div>
       <div class="col-md-6 text-center py-3">
           {{!--Right side --}}
-          <img src="/static/images/bg1.jpg" style="height: 300px" alt="">
+          <img src="{{this.image}}" style="height: 300px" alt="">
       </div>
     </div>
+      {{/each}}
+      {{/each}}
   </div>
 </section>
 
@@ -82,18 +91,22 @@
 
 <section class="banner3_section my-3">
   <div class="container">
+    {{#each banners}}
+    {{#each banner3}}
     <div class="row">  
       <div class="col-md-6 text-center py-3">
           {{!--Right side --}}
-          <img src="/static/images/bg1.jpg" class="img-fluid" style="height: 300px" alt="">
+          <img src="{{this.image}}" class="img-fluid" style="height: 300px" alt="">
       </div>
       <div class="col-md-6 text-center">
             {{!--Left side --}}
-          <h3>we work for people, not for money</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, culpa debitis corrupti maxime repellendus officia ipsam est magni, tempore iure laborum vero perferendis? Officia dicta quas corrupti inventore rem, doloribus repellat quisquam, earum veniam distinctio doloremque modi omnis nihil sed assumenda, ea optio recusandae consequatur maiores maxime repellendus dolore nesciunt voluptatem voluptatibus! Quibusdam, tenetur. Nemo placeat architecto, enim molestias quibusdam unde, laboriosam commodi numquam totam exercitationem officiis, esse saepe quae voluptas quos! Libero, distinctio dolores rem neque ea eveniet unde vero! Ducimus vel, a deleniti ipsa excepturi placeat. Deserunt, ipsum! Est ex amet excepturi esse porro repellat placeat reprehenderit corporis.</p>
-          <button class="btn btn-primary">start learning</button>
+          <h3>{{this.title}}</h3>
+          <p>{{this.description}}</p>
+          <button class="btn btn-primary">{{this.buttonText}}</button>
       </div>
     </div>
+    {{/each}}
+    {{/each}}
   </div>
 </section>
 
@@ -154,8 +167,8 @@
 {{!-- footer --}}
 
 <sction class="">
-<footer class="container background2 text-center py-5">
-   <div class="container">
+<footer class="container  text-center py-5">
+   <div class="container background2">
    
     <div class="row">
       <div class="col-md-12">

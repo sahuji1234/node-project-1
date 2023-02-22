@@ -7,6 +7,7 @@ const Service = require("../models/Service")
 const Contact = require("../models/Contact");
 const About = require("../models/About");
 const Footer = require('../models/Footer');
+const Banner= require("../models/Banners")
 const { response } = require('express');
 
 const routes = express.Router()
@@ -16,6 +17,7 @@ routes.get("/",async (req,res)=>{
     const services = await Service.find()
     const about = await About.find()
     const footer= await Footer.find()
+    const banners = await Banner.find()
     //console.log(details)
     // res.send("this is message from routes")
     res.render("index",{
@@ -23,7 +25,8 @@ routes.get("/",async (req,res)=>{
         slides:slides,
         services:services,
         about:about,
-        footer:footer
+        footer:footer,
+        banners:banners
     })
 })
 

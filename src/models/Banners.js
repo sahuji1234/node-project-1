@@ -2,13 +2,31 @@ const mongoose= require('mongoose');
 
 const Banners = mongoose.Schema([
  {
-    String:{
-        "image":String,
-        "title":String,
-        "description":String,
-        "buttonText":String,
-        "buttonLink":String
+    banner1:[{
+        image:String,
+        title: String,
+        description:String,
+        buttonText:String,
+        buttonLink:String
     },
+    ],
+    banner2:[{
+        image:String,
+        title: String,
+        description:String,
+        buttonText:String,
+        buttonLink:String
+    },
+    ],
+    banner3:[{
+        image:String,
+        title: String,
+        description:String,
+        buttonText:String,
+        buttonLink:String
+    },
+    ],
+    
  }
 ])
 

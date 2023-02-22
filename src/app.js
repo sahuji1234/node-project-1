@@ -35,21 +35,21 @@ mongoose.connect("mongodb://localhost/website_node",()=>{
 
     // Banners.create([
     //     {
-    //         "banner1":{
+    //         banner1:{
     //             "image":"",
     //             "title":"Start learning new technologies",
     //             "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores blanditiis maxime debitis earum illum temporibus aliquam, similique sit totam ipsum hic eligendi officia eveniet aliquid autem voluptatum eaque est ab.",
     //             "buttonText":"start learning",
     //             "buttonLink":""
     //         },
-    //         "banner2":{
+    //         banner2:{
     //             "image":"/static/images/bg1.jpg",
     //             "title":"we work for people, not for money",
     //             "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, culpa debitis corrupti maxime repellendus officia ipsam est magni, tempore iure laborum vero perferendis? Officia dicta quas corrupti inventore rem, doloribus repellat quisquam, earum veniam distinctio doloremque modi omnis nihil sed assumenda, ea optio recusandae consequatur maiores maxime repellendus dolore nesciunt voluptatem voluptatibus! Quibusdam, tenetur. Nemo placeat architecto, enim molestias quibusdam unde, laboriosam commodi numquam totam exercitationem officiis, esse saepe quae voluptas quos! Libero, distinctio dolores rem neque ea eveniet unde vero! Ducimus vel, a deleniti ipsa excepturi placeat. Deserunt, ipsum! Est ex amet excepturi esse porro repellat placeat reprehenderit corporis.",
     //             "buttonText":"start learning",
     //             "buttonLink":""
     //         },
-    //         "banner3":{
+    //         banner3:{
     //             "image":"/static/images/bg1.jpg",
     //             "title":"we work for people, not for money",
     //             "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, culpa debitis corrupti maxime repellendus officia ipsam est magni, tempore iure laborum vero perferendis? Officia dicta quas corrupti inventore rem, doloribus repellat quisquam, earum veniam distinctio doloremque modi omnis nihil sed assumenda, ea optio recusandae consequatur maiores maxime repellendus dolore nesciunt voluptatem voluptatibus! Quibusdam, tenetur. Nemo placeat architecto, enim molestias quibusdam unde, laboriosam commodi numquam totam exercitationem officiis, esse saepe quae voluptas quos! Libero, distinctio dolores rem neque ea eveniet unde vero! Ducimus vel, a deleniti ipsa excepturi placeat. Deserunt, ipsum! Est ex amet excepturi esse porro repellat placeat reprehenderit corporis.",
